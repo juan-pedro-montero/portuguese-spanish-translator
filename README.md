@@ -30,7 +30,7 @@ Este repositorio contiene todo el material necesario para extraer, preprocesar, 
 
 NOTA IMPORTANTE:
 Debido a su gran tamaño (el dataset de 2.5 millones de frases y los modelos), los archivos de datos y los checkpoints no están incluidos en este repositorio de Git.
-Sin embargo, puedes descargarlos desde los siguientes enlaces: https://drive.google.com/file/d/1HCtgfifHwPU-BPpWZ2tP4aocMqY-qgcD/view?usp=sharing
+Sin embargo, puedes descargarlos desde los siguientes enlaces: https://drive.google.com/file/d/1CR6WpZJMI0NcCl8hB2nBot6Xfuqe1oH3/view?usp=sharing
 
 ---
 
@@ -67,14 +67,18 @@ Sin embargo, puedes descargarlos desde los siguientes enlaces: https://drive.goo
 
 A continuación se detallan los pasos para reproducir el pipeline completo de extracción, preprocesamiento, entrenamiento e inferencia:
 
-1. **EDA y limpieza**\
+0. Cargar Data
+   - Crear el directorio "data"
+   - Descomprimir el archivo "corpus_pt_es" en carpeta "data"
+
+2. **EDA y limpieza**\
    Abrir y ejecutar `notebooks/1_EDA.ipynb`. Este notebook realiza:
 
    - Muestreo y análisis de distribuciones de longitud.
    - Filtrado de vacíos, duplicados y pares extremos.
    - Exportación de `clean_corpus.pt` y `clean_corpus.es`.
 
-2. **Tokenización y partición**\
+3. **Tokenización y partición**\
    Ejecutar `notebooks/2_Tokenize_Split.ipynb`, que:
 
    - Carga el corpus limpio.
@@ -82,7 +86,7 @@ A continuación se detallan los pasos para reproducir el pipeline completo de ex
    - Separa los datos en train (80%) y test (20%).
    - Guarda las particiones en formato Arrow.
 
-3. **Fine‑tuning con M2M100 + LoRA**\
+4. **Fine‑tuning con M2M100 + LoRA**\
    Abrir `notebooks/4_Transformer_FT.ipynb` y ejecutar:
 
    - Carga de datos tokenizados.
@@ -90,7 +94,7 @@ A continuación se detallan los pasos para reproducir el pipeline completo de ex
    - Configuración de LoRA, `Seq2SeqTrainer` y entrenamiento por 2 épocas.
    - Cálculo de BLEU y perplexity en un subset de 1,000 ejemplos.
 
-4. **Inferencia**\
+5. **Inferencia**\
    Ejecutar `notebooks/5_Inference.ipynb` para:
 
    - Cargar el mejor checkpoint y el tokenizer.
