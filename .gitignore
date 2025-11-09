@@ -1,0 +1,17 @@
+# Ignorar carpetas de datos y modelos
+data/
+Checkpoints/
+
+# Ignorar archivos comprimidos
+*.zip
+*.rar
+
+# Archivos de sistema y entorno
+*.pt
+*.bin
+*.csv
+.ipynb_checkpoints/
+__pycache__/
+venv/
+.env
+.DS_Store

@@ -1,0 +1,19 @@
+# Data Analysis & Plotting
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+
+# Core ML/DL & Transformers
+torch
+transformers
+peft
+accelerate
+
+# Hugging Face Ecosystem
+datasets
+evaluate
+
+# Notebook Environment
+notebook
