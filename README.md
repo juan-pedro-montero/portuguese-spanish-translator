@@ -13,18 +13,14 @@ Este repositorio contiene todo el material necesario para extraer, preprocesar, 
 │   ├── clean_corpus_pt_es.json            # Corpus paralelo limpio (JSON)
 │   ├── clean_corpus_pt.txt                # Corpus PT limpio
 │   ├── clean_corpus_es.txt                # Corpus ES limpio
-│   └── tokenized_facebook_m2m100_418M_len128/
-│       ├── train.arrow
-│       └── test.arrow
 │
 ├── outputs
 │   └── m2m100_finetuned_lora_infer        # Modelo y tokenizer guardados para inferencia
 │
 ├── 1_EDA.ipynb         
 ├── 2_Tokenización_Split.ipynb
-├── 3_Transformer_Scratch.ipynb
-├── 4_Transformer_Finetunning.ipynb
-├── 5_Modelo_Inferencia.ipynb
+├── 3_Transformer_Finetunning.ipynb
+├── 4_Modelo_Inferencia.ipynb
 └── readme.md     
 ```
 
